@@ -1,4 +1,4 @@
-slide.nav
-slide.snm
-slide.synctex.gz
-slide.vrb
+*.nav
+*.snm
+*.synctex.gz
+*.vrb
