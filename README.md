@@ -16,7 +16,7 @@
 
 ![](./pic/3.png)
 
-完整的编译后的 pdf 文件见 [output.pdf](./output.pdf)
+完整的编译后的 pdf 文件见 [slide.pdf](./slide.pdf)
 
 ##  Acknowledgements
 
