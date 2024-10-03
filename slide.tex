@@ -8,7 +8,7 @@
 \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
 \usepackage{graphicx,pstricks,listings,stackengine}
 \usepackage{CCNU}
-
+\usefonttheme[onlymath]{serif}
 
 \author{韩子坚}
 \title{组会分享}    %标题
@@ -148,41 +148,41 @@
     \end{exampleblock}
 \end{frame}
 
-\begin{frame}{图形与分栏}
-    % From thuthesis user guide.
-    \begin{minipage}[c]{0.3\linewidth}
-        \psset{unit=0.8cm}
-        \begin{pspicture}(-1.75,-3)(3.25,4)
-            \psline[linewidth=0.25pt](0,0)(0,4)
-            \rput[tl]{0}(0.2,2){$\vec e_z$}
-            \rput[tr]{0}(-0.9,1.4){$\vec e$}
-            \rput[tl]{0}(2.8,-1.1){$\vec C_{ptm{ext}}$}
-            \rput[br]{0}(-0.3,2.1){$\theta$}
-            \rput{25}(0,0){%
-            \psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,-3.2)(0.1,0)}
-            \rput{25}(0,0){%
-            \psellipse[fillstyle=solid,fillcolor=yellow,linewidth=3pt](0,0)(1.5,0.5)}
-            \rput{25}(0,0){%
-            \psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,0)(0.1,3.2)}
-            \rput{25}(0,0){\psline[linecolor=red,linewidth=1.5pt]{->}(0,0)(0.,2)}
-%           \psRotation{0}(0,3.5){$\dot\phi$}
-%           \psRotation{25}(-1.2,2.6){$\dot\psi$}
-            \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(0,2)
-            \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(3,-1)
-            \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(2.85,-0.95)
-            \psarc{->}{2.1}{90}{112.5}
-            \rput[bl](.1,.01){C}
-        \end{pspicture}
-    \end{minipage}\hspace{1cm}
-    \begin{minipage}{0.5\linewidth}
-        \medskip
-        %\hspace{2cm}
-        \begin{figure}[h]
-            \centering
-            \includegraphics[height=.4\textheight]{pic/dtmf.pdf}
-        \end{figure}
-    \end{minipage}
-\end{frame}
+% \begin{frame}{图形与分栏}
+%     % From thuthesis user guide.
+%     \begin{minipage}[c]{0.3\linewidth}
+%         \psset{unit=0.8cm}
+%         \begin{pspicture}(-1.75,-3)(3.25,4)
+%             \psline[linewidth=0.25pt](0,0)(0,4)
+%             \rput[tl]{0}(0.2,2){$\vec e_z$}
+%             \rput[tr]{0}(-0.9,1.4){$\vec e$}
+%             \rput[tl]{0}(2.8,-1.1){$\vec C_{ptm{ext}}$}
+%             \rput[br]{0}(-0.3,2.1){$\theta$}
+%             \rput{25}(0,0){%
+%             \psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,-3.2)(0.1,0)}
+%             \rput{25}(0,0){%
+%             \psellipse[fillstyle=solid,fillcolor=yellow,linewidth=3pt](0,0)(1.5,0.5)}
+%             \rput{25}(0,0){%
+%             \psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,0)(0.1,3.2)}
+%             \rput{25}(0,0){\psline[linecolor=red,linewidth=1.5pt]{->}(0,0)(0.,2)}
+% %           \psRotation{0}(0,3.5){$\dot\phi$}
+% %           \psRotation{25}(-1.2,2.6){$\dot\psi$}
+%             \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(0,2)
+%             \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(3,-1)
+%             \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(2.85,-0.95)
+%             \psarc{->}{2.1}{90}{112.5}
+%             \rput[bl](.1,.01){C}
+%         \end{pspicture}
+%     \end{minipage}\hspace{1cm}
+%     \begin{minipage}{0.5\linewidth}
+%         \medskip
+%         %\hspace{2cm}
+%         \begin{figure}[h]
+%             \centering
+%             \includegraphics[height=.4\textheight]{pic/dtmf.pdf}
+%         \end{figure}
+%     \end{minipage}
+% \end{frame}
 
 \begin{frame}[fragile]{\LaTeX{} 常用命令}
     \begin{exampleblock}{命令}
