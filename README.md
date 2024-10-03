@@ -16,6 +16,8 @@
 
 ![](./pic/3.png)
 
+完整的编译后的 pdf 文件见 [output.pdf](./output.pdf)
+
 ##  Acknowledgements
 
 本项目基于 [THU-Beamer-Theme](https://github.com/tuna/THU-Beamer-Theme)
