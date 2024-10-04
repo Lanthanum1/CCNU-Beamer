@@ -18,6 +18,10 @@
 
 完整的编译后的 pdf 文件见 [slide.pdf](./slide.pdf)
 
+## Example
+
+具体的使用方法以及更加丰富的案例见 [sample_slides](./sample_slides/)
+
 ##  Acknowledgements
 
 本项目基于 [THU-Beamer-Theme](https://github.com/tuna/THU-Beamer-Theme)
