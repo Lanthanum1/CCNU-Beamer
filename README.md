@@ -25,7 +25,7 @@
 
 ## Makefile
 
-由于 LaTex-worshop 的清理脚本无法清除所有中间文件，编译文件时请执行 `make` 命令会自动编译 tex 并清理所有的中间文件 .
+由于 LaTex Workshop 的清理脚本无法清除所有中间文件，编译文件时不要使用LaTex Workshop 的编译链，而应执行 `make` 命令会自动编译 slide.tex 并清理所有的中间文件 .
 
 ## Acknowledgements
 
