@@ -58,20 +58,14 @@
 	\tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
-
-% 定义每个部分的目标文件列表
+% 定义 sectionfiles 命令
 \newcommand{\sectionfiles}[1]{%
-  \ifcase#1
-    \input{0.tex}% 当 #1 为 0 时
-  \or
-    \input{1.tex}% 当 #1 为 1 时
-  \or
-    \input{2.tex}% 当 #1 为 2 时
-  \or
-    \input{3.tex}% 当 #1 为 3 时
-  \else
-    \typeout{Unknown section specified: #1}% 当 #1 不为 0-3 之内
-  \fi
+  \edef\chapFile{#1.tex} % 构造文件名
+  \IfFileExists{\chapFile}{%
+    \input{\chapFile} % 如果文件存在，则包含该文件
+  }{%
+    \typeout{Unknown section specified: #1}% 当 #1 对应的文件不存在时输出警告
+  }
 }
 
 % 检查是否定义了 \compileSection，仅包括对应部分
