@@ -2,11 +2,11 @@
 
 ## Overview
 
-`CCNU`风格的`Beamer`主题，可用于答辩、汇报、组会分享等.
+`CCNU`风格的 `Beamer`主题，可用于答辩、汇报、组会分享等.
 
-使用校官网`RGB(57, 130, 151)`作为底色.
+使用校官网 `RGB(57, 130, 151)`作为底色.
 
-使用方式和详细细节见源代码和`slide`.
+使用方式和详细细节见源代码和 `slide`.
 
 ## Preview
 
@@ -22,6 +22,11 @@
 
 具体的使用方法以及更加丰富的案例见 [sample_slides](./sample_slides/)
 
-##  Acknowledgements
+
+## Makefile
+
+由于 LaTex-worshop 的清理脚本无法清除所有中间文件，编译文件时请执行 `make` 命令会自动编译 tex 并清理所有的中间文件 .
+
+## Acknowledgements
 
 本项目基于 [THU-Beamer-Theme](https://github.com/tuna/THU-Beamer-Theme)
