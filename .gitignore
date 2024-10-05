@@ -3,3 +3,5 @@
 *.synctex.gz
 *.vrb
 *.bbl
+*.synctex(busy)
+*.log
