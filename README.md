@@ -6,8 +6,6 @@
 
 使用校官网 `RGB(57, 130, 151)`作为底色.
 
-使用方式和详细细节见源代码和 `slide`.
-
 ## Preview
 
 ![](./pic/1.png)
@@ -28,7 +26,7 @@
 
 为了加速编译，Makefile 提供了分段编译的功能，例如，执行 `make 0` 会只编译第 0 个 section，执行 `make 1` 会只编译第 1 个 section，而如果不加参数，执行 `make` 会编译整个 slide.tex.
 
-如果需要新增章节，只需要在根目录下新建 4.tex ，然后在 slide.tex 中 增加 ` \input{4.tex}` ，无需修改 Makefile. 
+如果需要新增章节，只需要在根目录下新建 4.tex ，然后在 slide.tex 中 增加 `\input{4.tex}` ，无需修改 Makefile. 
 
 
 
