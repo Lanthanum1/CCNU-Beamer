@@ -9,8 +9,13 @@ all:$(DOCFILE)
 	$(LATEX) $(LATEX_FLAGS) $(DOCFILE)
 	$(MAKE) clean
 
+%:
+	$(LATEX) $(LATEX_FLAGS) "\def\compileSection{$*} \input{$(DOCFILE)}"
+	$(LATEX) $(LATEX_FLAGS) "\def\compileSection{$*} \input{$(DOCFILE)}"
+	$(MAKE) clean
+
 # Clean auxiliary files
 clean:
-	rm -f *.toc *.bbl *.blg *.out *.aux *.log *.bak *.thm *.synctex.gz *.fdb_latexmk *.fls *.glo *.gls *.idx *.ilg *.ind *.nav *.snm *.hd *.ins *.vrb
+	rm -f *.toc *.bbl *.blg *.out *.aux *.log *.bak *.thm *.fdb_latexmk *.fls *.glo *.gls *.idx *.ilg *.ind *.nav *.snm *.hd *.ins *.vrb
 
 .PHONY: all clean
