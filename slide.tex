@@ -45,17 +45,17 @@
 
 %homepage
 \begin{frame}
-	\titlepage
-	\begin{figure}[htpb]
-		\begin{center}
-			\includegraphics[width=0.15\linewidth]{pic/CCNU.jpg}
-		\end{center}
-	\end{figure}
+  \titlepage
+  \begin{figure}[htpb]
+    \begin{center}
+      \includegraphics[width=0.15\linewidth]{pic/logo/CCNU.jpg}
+    \end{center}
+  \end{figure}
 \end{frame}
 
 %content
 \begin{frame}{Content}
-	\tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+  \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 \end{frame}
 
 % 定义 sectionfiles 命令
@@ -72,7 +72,7 @@
 \ifdefined\compileSection
   \sectionfiles{\compileSection}
 \else
-% 如果未定义 \compileSection，则包括所有部分
+  % 如果未定义 \compileSection，则包括所有部分
   \input{0.tex}
   \input{1.tex}
   \input{2.tex}
