@@ -31,9 +31,9 @@
 
 ## Usage
 
-复制到 target 目录下：
+执行 `bash init.sh target_directory`
 
-`cp -r 0.tex 1.tex 2.tex 3.tex CCNU.sty Makefile pic ref.bib slide.pdf slide.synctex.gz slide.tex ./target`
+例如 `bash init.sh /root/github/CCNU-Beamer/sample_slides/mlm_survey` 
 
 ## Acknowledgements
 
