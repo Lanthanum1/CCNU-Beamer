@@ -5,13 +5,13 @@ DOCFILE = slide.tex
 
 # Default target
 all:$(DOCFILE)
-	$(LATEX) $(LATEX_FLAGS) $(DOCFILE)
-	$(LATEX) $(LATEX_FLAGS) $(DOCFILE)
+	$(LATEX) $(LATEX_FLAGS) $(DOCFILE);\
+	$(LATEX) $(LATEX_FLAGS) $(DOCFILE);\
 	$(MAKE) clean
 
 %:
-	$(LATEX) $(LATEX_FLAGS) "\def\compileSection{$*} \input{$(DOCFILE)}"
-	$(LATEX) $(LATEX_FLAGS) "\def\compileSection{$*} \input{$(DOCFILE)}"
+	$(LATEX) $(LATEX_FLAGS) "\def\compileSection{$*} \input{$(DOCFILE)}";\
+	$(LATEX) $(LATEX_FLAGS) "\def\compileSection{$*} \input{$(DOCFILE)}";\
 	$(MAKE) clean
 
 # Clean auxiliary files

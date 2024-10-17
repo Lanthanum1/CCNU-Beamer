@@ -1,10 +1,44 @@
-\section{课题背景}
-
-\begin{frame}{用Beamer很高大上？}
-	\begin{itemize}[<+-| alert@+>] % 当然，除了alert，手动在里面插 \pause 也行
-		\item 大家可能会\LaTeX{}，不会的也会GPT，好多学校都有自己的Beamer主题
-		\item 中文支持请选择 Xe\LaTeX{} 编译选项
-		\item 原 THU Beamer 的项目地址位于 \url{https://github.com/tuna/THU-Beamer-Theme}
-		\item 本项目地址位于 \url{https://github.com/Lanthanum1/CCNU-Beamer}，如果有bug或者feature request可以去提issue
+\section{MATHEMATICAL TASKS}
+\subsection{Mathematical Calculation}
+\begin{frame}{Arithmetic Representation}
+	\begin{itemize}
+		\item \textbf{Numerical Challenges}
+		      \begin{itemize}
+			      \item 初期处理数值时，常被忽略或简单化。
+			      \item BERT在遇到数值答案时表现较差。
+		      \end{itemize}
+		\item \textbf{近期表示方法}
+		      \begin{itemize}
+			      \item GenBERT：
+			            \begin{itemize}
+				            \item 数字按位数进行标记。
+				            \item 进行算术问题的微调。
+			            \end{itemize}
+			      \item 数字转换为科学计数法。
+			      \item 使用数字嵌入形成整体的数字表示。
+			      \item 使用Digit-RNN和指数嵌入，重点突出指数。
+			      \item 引入一致的标记化方法，增强相似数值之间的关系。
+		      \end{itemize}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Arithmetic Calculation}
+	\begin{itemize}
+		\item 研究对象：加法、减法以及两位数乘法等算术任务。
+
+		\item \textbf{传统假设与挑战}
+		      \begin{itemize}
+			      \item 传统上认为LLM难以进行复杂的算术运算，尤其是大位数乘法。
+			      \item 新方法的应用挑战了这一假设。
+		      \end{itemize}
+		\item \textbf{近期方法}
+		      \begin{itemize}
+			      \item 应用专项提示工程提升加法能力，但乘法有位数限制。
+			      \item 利用相对位置嵌入和训练集优化研究算术任务的长度泛化。
+			      \item ScratchpadGPT通过预生成思维链在8位加法中表现出色。
+			      \item 监督学习用于微调大整数的基础运算。
+			      \item MathGLM通过在数据集中分解复杂算术表达式，逐步生成答案并学习计算规则。
+		      \end{itemize}
+	\end{itemize}
+
 \end{frame}
