@@ -26,9 +26,14 @@
 
 为了加速编译，Makefile 提供了分段编译的功能，例如，执行 `make 0` 会只编译第 0 个 section，执行 `make 1` 会只编译第 1 个 section，而如果不加参数，执行 `make` 会编译整个 slide.tex.
 
-如果需要新增章节，只需要在根目录下新建 new_sec.tex ，然后在 slide.tex 中 增加 `\input{new_sec.tex}` ，无需修改 Makefile. 
+如果需要新增章节，只需要在根目录下新建 new_sec.tex ，然后在 slide.tex 中 增加 `\input{new_sec.tex}` ，无需修改 Makefile.
 
 
+## Usage
+
+复制到 target 目录下：
+
+`cp -r 0.tex 1.tex 2.tex 3.tex CCNU.sty Makefile pic ref.bib slide.pdf slide.synctex.gz slide.tex ./target`
 
 ## Acknowledgements
 
