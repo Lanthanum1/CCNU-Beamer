@@ -7,6 +7,7 @@
 			      \item 初期处理数值时，常被忽略或简单化。
 			      \item BERT在遇到数值答案时表现较差。
 		      \end{itemize}
+		      \pause
 		\item \textbf{近期表示方法}
 		      \begin{itemize}
 			      \item GenBERT：
@@ -24,21 +25,57 @@
 
 \begin{frame}{Arithmetic Calculation}
 	\begin{itemize}
-		\item 研究对象：加法、减法以及两位数乘法等算术任务。
-
-		\item \textbf{传统假设与挑战}
-		      \begin{itemize}
-			      \item 传统上认为LLM难以进行复杂的算术运算，尤其是大位数乘法。
-			      \item 新方法的应用挑战了这一假设。
-		      \end{itemize}
+		% \item 研究对象：加法、减法以及两位数乘法等算术任务。
+		%       \pause
+		% \item 传统上认为LLM难以进行复杂的算术运算，尤其是大位数乘法。
+		%       \pause
 		\item \textbf{近期方法}
 		      \begin{itemize}
-			      \item 应用专项提示工程提升加法能力，但乘法有位数限制。
-			      \item 利用相对位置嵌入和训练集优化研究算术任务的长度泛化。
-			      \item ScratchpadGPT通过预生成思维链在8位加法中表现出色。
-			      \item 监督学习用于微调大整数的基础运算。
-			      \item MathGLM通过在数据集中分解复杂算术表达式，逐步生成答案并学习计算规则。
+			      \item 应用 specialized prompt engineering 提升加法能力，但乘法有位数限制。
+			            \pause
+			      \item 利用 relative position embeddings 和 training set priming 实现算术任务的长度泛化。
+			            \pause
+			            \begin{itemize}
+				            \item （回忆一下 Transformer 的 encode 过程）一般来说，Transformer模型使用绝对位置嵌入来为输入序列中的每个位置提供一个固定的位置标识符，这种方式在处理序列长度变化时表现不佳，因为这种嵌入将标记的位置信息与其自身的表示混合在一起，导致模型对序列长度的变化非常敏感。
+				                  \pause
+				            \item 相对位置嵌入则是用来编码标记之间的相对距离，而不是它们的绝对位置。这意味着模型可以更容易地将学习到的模式应用到未见过的序列长度上，因为相对位置信息可以更好地适应变化的序列长度。
+				                  \pause
+				            \item 对于乘法任务，相对位置嵌入并不能使模型实现长度上的泛化（仅仅依靠相对位置信息可能不足以捕捉到乘法运算的所有细节）。为了克服这一限制，作者提出了“训练集引导”的方法，通过在训练集中添加少量长序列的例子来帮助模型泛化到更长的序列长度上。例如，在训练集中包含极少的长序列样本（如50个样本），就能使原本只能处理短序列的模型扩展到处理35位数乘以3位数这样的长序列计算任务。
+			            \end{itemize}
+
 		      \end{itemize}
 	\end{itemize}
 
+\end{frame}
+
+\begin{frame}{Arithmetic Calculation}
+	\begin{itemize}
+		\item ScratchpadGPT通过 CoT 在8位加法中表现出色。
+		      \pause
+		\item 监督学习用于微调大整数的基础运算。(将各种算术任务分为可学习和不可学习的任务，然后通过利用基本算术原则将不可学习的任务分解为一系列可学习的任务。)
+		      \pause
+		\item MathGLM通过在数据集中分解复杂算术表达式，逐步生成答案并学习计算规则。
+	\end{itemize}
+\end{frame}
+
+\subsection{Mathematical Reasoning}
+\begin{frame}
+	\frametitle{Math Problem Solving}
+	\begin{itemize}
+		\item \textbf{Math Word Problem Solving}
+		      \begin{itemize}
+			      \item 数学文字问题 (MWPs) \textbf{通过文字描述来呈现数学概念和计算}，要求从中提取相关数学信息并应用适当的数学原理。
+			      \item 数学文字问题解决的研究重点在于\textbf{使用高效智能的算法解决问题}。
+			      \item 近期研究：
+			            \begin{itemize}
+				            \item MathPrompter 使用 GPT-3 DaVinci 模型取得优异成绩，展现LLMs在复杂数学推理方面的潜力。
+				            \item Yuan 等研究预训练损失、监督数据量及增强数据对LLMs数学推理表现的影响，提出拒绝采样微调 (RFT)提升推理泛化能力。
+				            \item Yuan 等强调LLMs在基本算术任务中的表现对建立基线能力的重要性。
+				            \item MetaMath 提出让LLMs 生成自己的数学问题，创建自我持续学习环境。
+				            \item WizardMath 探索通过强化进化指令提升LLMs数学推理能力。
+				            \item MathAttack 研究LLMs对专用对抗输入的敏感性，开发更强健可靠的模型。
+				            \item LLEMMA 开发专用于数学的开放语言模型，旨在解决从基础到高级的数学问题。
+			            \end{itemize}
+		      \end{itemize}
+	\end{itemize}
 \end{frame}
