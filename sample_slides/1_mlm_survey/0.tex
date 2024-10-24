@@ -65,17 +65,73 @@
 		\item \textbf{Math Word Problem Solving}
 		      \begin{itemize}
 			      \item 数学文字问题 (MWPs) \textbf{通过文字描述来呈现数学概念和计算}，要求从中提取相关数学信息并应用适当的数学原理。
+			            %   \pause
 			      \item 数学文字问题解决的研究重点在于\textbf{使用高效智能的算法解决问题}。
+			            \pause
 			      \item 近期研究：
 			            \begin{itemize}
 				            \item MathPrompter 使用 GPT-3 DaVinci 模型取得优异成绩，展现LLMs在复杂数学推理方面的潜力。
-				            \item Yuan 等研究预训练损失、监督数据量及增强数据对LLMs数学推理表现的影响，提出拒绝采样微调 (RFT)提升推理泛化能力。
-				            \item Yuan 等强调LLMs在基本算术任务中的表现对建立基线能力的重要性。
-				            \item MetaMath 提出让LLMs 生成自己的数学问题，创建自我持续学习环境。
-				            \item WizardMath 探索通过强化进化指令提升LLMs数学推理能力。
-				            \item MathAttack 研究LLMs对专用对抗输入的敏感性，开发更强健可靠的模型。
-				            \item LLEMMA 开发专用于数学的开放语言模型，旨在解决从基础到高级的数学问题。
+				                  % \pause
+				            \item 拒绝采样微调 (RFT)提升推理泛化能力。（通过生成多个候选样本，选择其中高质量样本进行模型微调的训练方法）
+				                  % \pause
+				            \item MetaMath 通过从多个角度重新编写数学问题来生成新的数据集MetaMathQA，然后在此数据集上微调LLaMA-2模型
 			            \end{itemize}
 		      \end{itemize}
 	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Math Problem Solving}
+	\begin{itemize}
+		\item MathAttack：
+		      \begin{itemize}
+			      \item 逻辑实体识别: 找出题目中的关键元素，比如人物（Role Entity）、数值（Number Entity）以及场景（Scenario Entity，如时间或地点）。这些元素对于构成题目逻辑至关重要，因此一旦改变就可能会改变题目的实际意义。
+			            %   \pause
+			      \item 冻结逻辑实体: 这些重要的信息将不会被更改
+			            %   \pause
+			      \item 词级攻击: 不改变上述逻辑实体的前提下，对题目中的其他词汇进行替换或修改，以期影响模型对题目的理解和解答能力。
+			            %   \pause
+			      \item 这种方法旨在创造一个对抗样例，这个样例在人类看来与原题非常相似，但对于机器学习模型来说，它可能导致错误的理解或解答。提高了 LLMs 对于数学问题的鲁棒性。
+		      \end{itemize}
+		      \pause
+		\item LLEMMA：
+		      \begin{itemize}
+			      \item \textbf{MATH+Python}: 模型需交替地用自然语言描述解题步骤，然后编写相应的Python代码来执行该步骤。最后的答案是一个数字结果或者SymPy对象。
+		      \end{itemize}
+	\end{itemize}
+\end{frame}
+
+% \begin{frame}
+% 	\frametitle{Math Question Answering}
+% 	\begin{itemize}
+% 		\item 数学问题问答(MQA)是要求 LLMs 理解并自动解决自然语言形式的数学问题。涵盖从简单算术到复杂的高中或大学数学，包括代数、微积分和几何。
+% 		\item \textbf{研究进展}
+% 		      \begin{itemize}
+% 			      \item Sachan等提出评估神经网络架构的框架，强调代数泛化的重要性。
+% 			      \item GEOS系统：结合文本理解和图表解析来解决SAT几何问题。
+% 			      \item 新数据集与系统：
+% 			            \begin{itemize}
+% 				            \item Inter-GPS、IconQA和PGDP5K等提供抽象图表理解和视觉语言推理的新基准。
+% 				            \item Scharpf等研究无监督公式标记方法，促进数学文档的自动理解。
+% 			            \end{itemize}
+% 		      \end{itemize}
+% 	\end{itemize}
+% \end{frame}
+
+\begin{frame}
+\frametitle{Theorem Proving}
+Baldur:
+\begin{enumerate}
+	\item \textbf{证明生成}: 将定理陈述作为输入，LLM 尝试生成完整的证明，然后使用 Isabelle 证明助手进行验证。
+	\item \textbf{证明修复}: 如果验证结果表明证明失败，则使用 LLM 尝试新的证明，并再次使用 Isabelle 证明助手进行验证。
+	\item \textbf{上下文信息}: 将定理所在的上下文信息作为补充输入，以帮助 LLM 生成更准确的证明。
+\end{enumerate}
+\pause
+Draft, Sketch, and Prove(DSP)：
+\begin{enumerate}
+\item \textbf{起草非正式证明}：从一个数学问题的非正式陈述开始，这个陈述通常是以自然语言和数学公式混合的形式描述的。
+\item \textbf{映射成形式证明草图}：使用大型语言模型将每个非正式证明自动转换为形式证明草图。
+\item \textbf{证明剩余的猜想}：使用这些形式证明草图来引导自动化证明器，导向更简单的子问题。
+\end{enumerate}
+
+
 \end{frame}
