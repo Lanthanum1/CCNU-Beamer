@@ -1,0 +1,271 @@
+\section{实验概览}
+
+% \begin{frame}{实验结果概览}
+%     \begin{itemize}
+%         \item 本次实验主要对比了闭源模型和开源模型在数学问题解决任务上的表现。
+%         \item 我们评估了它们在使用和不使用 Wolfram Alpha (WA) 工具时的性能。
+%         \item 同时，我们也分析了 WA 的使用情况，潜在的问题并提出改进建议。
+%     \end{itemize}
+% \end{frame}
+
+% \begin{frame}{实验结果概览}
+%     \begin{itemize}
+%        \item  This presentation summarizes the experiments results, and we focus on a closed-source model and an open-source model.
+%         \item \textbf{Closed-Source Model:} 4o-mini
+%         \begin{itemize}
+%             \item We evaluate different strategies such as directly using the model, or Using Wolfram Alpha (WA), varying the number of retries.
+%         \end{itemize}
+%         \item \textbf{Open-Source Model:} qwen2.5:32b-instruct-fp16
+%         \begin{itemize}
+%              \item We evaluate with and without WA.
+%         \end{itemize}
+%     \end{itemize}
+% \end{frame}
+
+
+\begin{frame}{论文中的实验结果}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=0.6\textwidth]{./pic/1.png}
+			\caption{论文中的实验结果}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+\subsection{自己跑的实验 - 闭源模型}
+
+% \begin{frame}{自己跑的实验 - 闭源模型}
+% \centering
+%    \Large \textbf{闭源模型效果}
+% \end{frame}
+
+\begin{frame}{4o-mini: 不使用 WA （只使用 sg ）}
+	wa : Wolfram Alpha \;
+	sg : Solution Generation
+
+	\centering
+	\scriptsize
+	\scalebox{0.8}{
+	\begin{tabular}{@{}lc@{}}
+		
+		\toprule
+		ACC                           & Value              \\
+		\midrule
+		Accuracy Math data               & 65.0               \\
+		Total No of examples             & 100                \\
+		\midrule
+		\textbf{Accuracy by level}       &                    \\
+		Accuracy Level 3                 & 70.0               \\
+		Accuracy Level 1                 & 87.5               \\
+		Accuracy Level 4                 & 68.0               \\
+		Accuracy Level 2                 & 94.11764705882352  \\
+		Accuracy Level 5                 & 36.666666666666664 \\
+		\midrule
+		\textbf{Accuracy by type}        &                    \\
+		Accuracy Algebra                 & 73.07692307692307  \\
+		Accuracy Number Theory           & 81.81818181818183  \\
+		Accuracy Counting \& Probability & 66.66666666666666  \\
+		Accuracy Intermediate Algebra    & 60.0               \\
+		Accuracy Prealgebra              & 75.0               \\
+		Accuracy Precalculus             & 35.714285714285715 \\
+		Accuracy Geometry                & 42.857142857142854 \\
+		\midrule
+		No of errors in output format    & 12                 \\
+		\bottomrule
+	\end{tabular}
+	}
+
+\end{frame}
+
+\begin{frame}{4o-mini: wa + sg（wa最大尝试3次）}
+	\begin{itemize}
+		\item 100 例样本中有 12 例3次wa尝试均失败.
+	\end{itemize}
+	\centering
+	\scriptsize
+	\scalebox{0.8}{
+	\begin{tabular}{@{}lc@{}}
+		
+		\toprule
+		ACC                           & Value              \\
+		\midrule
+		Accuracy Math data               & 73.0               \\
+		Total No of examples             & 100                \\
+		\midrule
+		\textbf{Accuracy by level}       &                    \\
+		Accuracy Level 3                 & 85.0               \\
+		Accuracy Level 2                 & 94.11764705882352  \\
+		Accuracy Level 5                 & 53.333333333333336 \\
+		Accuracy Level 1                 & 87.5               \\
+		Accuracy Level 4                 & 68.0               \\
+		\midrule
+		\textbf{Accuracy by type}        &                    \\
+		Accuracy Precalculus             & 50.0               \\
+		Accuracy Algebra                 & 73.07692307692307  \\
+		Accuracy Number Theory           & 72.72727272727273  \\
+		Accuracy Prealgebra              & 85.0               \\
+		Accuracy Counting \& Probability & 83.33333333333334  \\
+		Accuracy Intermediate Algebra    & 70.0               \\
+		Accuracy Geometry                & 71.42857142857143  \\
+		\midrule
+		No of errors in output format    & 0                  \\
+		\bottomrule
+	\end{tabular}
+	}
+
+\end{frame}
+
+\begin{frame}{4o-mini: wa + sg（wa最大尝试10次）}
+	\begin{itemize}
+		\item 100 例样本中有 7 例10次wa尝试均失败.
+	\end{itemize}
+	\centering
+	\scriptsize
+	\scalebox{0.8}{
+	\begin{tabular}{@{}lc@{}}
+		
+		\toprule
+		ACC                           & Value              \\
+		\midrule
+		Accuracy Math data               & 69.0               \\
+		Total No of examples             & 100                \\
+		\midrule
+		\textbf{Accuracy by level}       &                    \\
+		Accuracy Level 5                 & 46.666666666666664 \\
+		Accuracy Level 3                 & 90.0               \\
+		Accuracy Level 4                 & 64.0               \\
+		Accuracy Level 2                 & 82.35294117647058  \\
+		Accuracy Level 1                 & 87.5               \\
+		\midrule
+		\textbf{Accuracy by type}        &                    \\
+		Accuracy Intermediate Algebra    & 50.0               \\
+		Accuracy Counting \& Probability & 75.0               \\
+		Accuracy Prealgebra              & 75.0               \\
+		Accuracy Precalculus             & 50.0               \\
+		Accuracy Algebra                 & 73.07692307692307  \\
+		Accuracy Geometry                & 71.42857142857143  \\
+		Accuracy Number Theory           & 81.81818181818183  \\
+		\midrule
+		No of errors in output format    & 0                  \\
+		\bottomrule
+	\end{tabular}
+	}
+
+\end{frame}
+
+\begin{frame}{4o-mini: wa + sg（wa最大尝试20次）}
+	\begin{itemize}
+		\item 100 例样本中有 3 例19次wa尝试均失败.
+		\item  Increasing max attempts has almost no effect.
+	\end{itemize}
+	\centering
+	\scriptsize
+	\scalebox{0.8}{
+	\begin{tabular}{@{}lc@{}}
+		
+		\toprule
+		ACC                           & Value              \\
+		\midrule
+		Accuracy Math data               & 72.0               \\
+		Total No of examples             & 100                \\
+		\midrule
+		\textbf{Accuracy by level}       &                    \\
+		Accuracy Level 1                 & 75.0               \\
+		Accuracy Level 3                 & 85.0               \\
+		Accuracy Level 5                 & 56.666666666666664 \\
+		Accuracy Level 2                 & 82.35294117647058  \\
+		Accuracy Level 4                 & 72.0               \\
+		\midrule
+		\textbf{Accuracy by type}        &                    \\
+		Accuracy Prealgebra              & 85.0               \\
+		Accuracy Counting \& Probability & 75.0               \\
+		Accuracy Number Theory           & 81.81818181818183  \\
+		Accuracy Algebra                 & 80.76923076923077  \\
+		Accuracy Intermediate Algebra    & 40.0               \\
+		Accuracy Precalculus             & 42.857142857142854 \\
+		Accuracy Geometry                & 85.71428571428571  \\
+		\midrule
+		No of errors in output format    & 0                  \\
+		\bottomrule
+	\end{tabular}
+	}
+\end{frame}
+
+\subsection{自己跑的实验 - 开源模型}
+
+% \begin{frame}{自己跑的实验 - 开源模型}
+% \centering
+%     \Large \textbf{开源模型效果}
+% \end{frame}
+
+\begin{frame}{qwen2.5:32b-instruct-fp16: 不使用 WA （只使用 sg ）}
+	\centering
+	\scriptsize
+	\scalebox{0.8}{
+	\begin{tabular}{@{}lc@{}}
+		
+		\toprule
+		ACC                           & Value              \\
+		\midrule
+		Accuracy Math data               & 72.0               \\
+		Total No of examples             & 100                \\
+		\midrule
+		\textbf{Accuracy by level}       &                    \\
+		Accuracy Level 1                 & 75.0               \\
+		Accuracy Level 2                 & 100.0              \\
+		Accuracy Level 3                 & 75.0               \\
+		Accuracy Level 5                 & 56.666666666666664 \\
+		Accuracy Level 4                 & 68.0               \\
+		\midrule
+		\textbf{Accuracy by type}        &                    \\
+		Accuracy Algebra                 & 69.23076923076923  \\
+		Accuracy Intermediate Algebra    & 70.0               \\
+		Accuracy Prealgebra              & 80.0               \\
+		Accuracy Counting \& Probability & 91.66666666666666  \\
+		Accuracy Number Theory           & 72.72727272727273  \\
+		Accuracy Precalculus             & 42.857142857142854 \\
+		Accuracy Geometry                & 85.71428571428571  \\
+		\midrule
+		No of errors in output format    & 0                  \\
+		\bottomrule
+	\end{tabular}
+	}
+
+\end{frame}
+
+\begin{frame}{qwen2.5:32b-instruct-fp16: wa + sg（wa最大尝试3次）}
+	\begin{itemize}
+		\item 100 例样本中有 11 例3次wa尝试均失败.
+	\end{itemize}
+	\centering
+	\scriptsize
+	\scalebox{0.8}{
+	\begin{tabular}{@{}lc@{}}
+		
+		\toprule
+		ACC                           & Value             \\
+		\midrule
+		Accuracy Math data               & 77.0              \\
+		Total No of examples             & 100               \\
+		\midrule
+		\textbf{Accuracy by level}       &                   \\
+		Accuracy Level 3                 & 95.0              \\
+		Accuracy Level 1                 & 100.0             \\
+		Accuracy Level 5                 & 63.33333333333333 \\
+		Accuracy Level 4                 & 56.00000000000001 \\
+		Accuracy Level 2                 & 100.0             \\
+		\midrule
+		\textbf{Accuracy by type}        &                   \\
+		Accuracy Number Theory           & 72.72727272727273 \\
+		Accuracy Algebra                 & 84.61538461538461 \\
+		Accuracy Precalculus             & 71.42857142857143 \\
+		Accuracy Prealgebra              & 85.0              \\
+		Accuracy Geometry                & 85.71428571428571 \\
+		Accuracy Counting \& Probability & 75.0              \\
+		Accuracy Intermediate Algebra    & 50.0              \\
+		\midrule
+		No of errors in output format    & 0                 \\
+		\bottomrule
+	\end{tabular}
+	}
+\end{frame}
