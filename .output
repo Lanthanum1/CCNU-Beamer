@@ -289,39 +289,60 @@ tionary-English.dict)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ctex/dictionary/translator-theore
 m-dictionary-ChineseUTF8.dict)
 No file slide.nav.
-
-Overfull \vbox (1.14833pt too high) detected at line 67
 [1]
 No file slide.toc.
 [2] (./0.tex
 No file slide.toc.
-[3]
-Overfull \vbox (0.75267pt too high) detected at line 33
-[4]
-No file slide.toc.
-[5] (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd) [6] [7]
-[8]
-Overfull \vbox (3.85165pt too high) detected at line 192
-[9]
-No file slide.toc.
-[10] [11] [12]) (./1.tex
-No file slide.toc.
-[13] [14]
+[3] (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
 
-[15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]) [28]
-(./slide.aux)
+[4] [5] [6] [7]) (./1.tex
+No file slide.toc.
+[8]
+No file slide.toc.
+[9] [10]) (./2.tex
+No file slide.toc.
+[11]
+No file slide.toc.
+[12] [13]
+No file slide.toc.
+[14] [15] [16] [17] (./slide.vrb) [18] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty)) [19]
+(./slide.vrb) [20] (./slide.vrb) [21] (./slide.vrb
+
+LaTeX Warning: Reference `eq:vsphere' on page 22 undefined on input line 32.
+
+
+LaTeX Warning: Reference `tab:number' on page 22 undefined on input line 32.
+
+) [22] [23]) (./3.tex
+No file slide.toc.
+[24] [25]) [26] (./slide.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 
 Package rerunfilecheck Warning: File `slide.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
  )
-(see the transcript file for additional information)
-Output written on slide.pdf (28 pages).
+Output written on slide.pdf (26 pages).
 SyncTeX written on slide.synctex.gz.
 Transcript written on slide.log.
 This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex)
@@ -610,26 +631,32 @@ tionary-English.dict)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ctex/dictionary/translator-theore
-m-dictionary-ChineseUTF8.dict) (./slide.nav)
-Overfull \vbox (1.14833pt too high) detected at line 67
-[1] (./slide.toc) [2] (./0.tex (./slide.toc) [3]
-Overfull \vbox (0.75267pt too high) detected at line 33
-[4] (./slide.toc) [5]
+m-dictionary-ChineseUTF8.dict) (./slide.nav) [1] (./slide.toc) [2] (./0.tex
+(./slide.toc) [3]
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd) [6] [7]
-[8]
-Overfull \vbox (3.85165pt too high) detected at line 192
-[9] (./slide.toc) [10] [11] [12]) (./1.tex (./slide.toc) [13] [14]
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
 
-[15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]) [28]
-(./slide.aux) )
-(see the transcript file for additional information)
-Output written on slide.pdf (28 pages).
+[4] [5] [6] [7]) (./1.tex (./slide.toc) [8] (./slide.toc) [9] [10]) (./2.tex
+(./slide.toc) [11] (./slide.toc) [12] [13] (./slide.toc) [14] [15] [16]
+[17] (./slide.vrb) [18] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty)) [19]
+(./slide.vrb) [20] (./slide.vrb) [21] (./slide.vrb) [22] [23]) (./3.tex
+(./slide.toc) [24] [25]) [26] (./slide.aux) )
+Output written on slide.pdf (26 pages).
 SyncTeX written on slide.synctex.gz.
 Transcript written on slide.log.
-make[1]: Entering directory '/root/github/CCNU-Beamer/sample_slides/4_mathsensei'
+make[1]: Entering directory '/root/github/CCNU-Beamer'
 rm -f *.toc *.bbl *.blg *.out *.aux *.log *.bak *.thm *.fdb_latexmk *.fls *.glo *.gls *.idx *.ilg *.ind *.nav *.snm *.hd *.ins *.vrb >> .output
-make[1]: Leaving directory '/root/github/CCNU-Beamer/sample_slides/4_mathsensei'
+make[1]: Leaving directory '/root/github/CCNU-Beamer'
