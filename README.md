@@ -18,7 +18,7 @@
 
 ## Example
 
-具体的使用方法以及更加丰富的案例见 [sample_slides](./sample_slides/)
+具体的使用方法以及更加丰富的案例见 [./sample_slides](./sample_slides/)
 
 ## Makefile
 
@@ -34,6 +34,17 @@
 执行 `bash init.sh target_directory`
 
 例如 `bash init.sh /root/github/CCNU-Beamer/sample_slides/mlm_survey` 
+
+## Markdown Support with LLM
+
+支持使用 markdown 编写文档，借助大模型转换为 beamer，具体的使用方法见 [./markdown](./markdown/)
+
+步骤：
+1. 在 [slide.md](./markdown/slide.md) 中编写 markdown 文件
+
+2. 执行 `python get_img_from_md.py` 会将 markdown 文件中的图片下载到 [pic](./pic/) 目录下
+
+3. 使用 [md2beamer_prompt.md](./markdown/md2beamer_prompt.md) 中的 prompt 借助 LLM 将 markdown 文件转换为 beamer
 
 ## Acknowledgements
 
