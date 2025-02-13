@@ -16,7 +16,7 @@ async def download_image(session, url, folder, index):
 
 async def main():
     # 读取Markdown文件内容
-    with open("./get_img.md", "r", encoding="utf-8") as file:
+    with open("./slide.md", "r", encoding="utf-8") as file:
         text = file.read()
 
     # 同时提取Markdown和HTML格式的图片链接，保持原始顺序

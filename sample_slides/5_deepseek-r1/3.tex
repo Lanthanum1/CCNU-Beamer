@@ -1,0 +1,47 @@
+\section{其他尝试}
+
+\begin{frame}
+	使用 Ollama 并不是最优选择，无论是速度还是显存占用都是不佳的。
+	
+	\texttt{OLLAMA\_SCHED\_SPREAD=1} 本来也是不建议开启的，Ollama 只能用单一的 gguf 格式的模型参数进行推理，但是对于 671 B 这么大的模型来说，全部加载在同一张 GPU 上是不太现实的，只能分担在多张GPU上，Ollama 对于一个模型在多卡中推理优化较差，这样做增加了GPU之间通信的成本，即使所有参数全部在GPU中推理，速度也只有 10-40 tokens/s。
+\end{frame}
+
+\begin{frame}
+\frametitle{vllm}
+\begin{itemize}
+    \item \textbf{vllm}可能是比 Ollama 更优的选择。
+        \begin{itemize}
+            \item 原生支持 safetensor 格式。
+            \item 但是 671B fp8 太大了，8卡a100也装不下。
+        \end{itemize}
+
+        \bigskip
+        
+    \item 考虑使用量化模型以降低显存需求。
+        \begin{itemize}
+            \item vllm官网中有一句话，Please note that GGUF support in vLLM is highly experimental and under-optimized at the moment, it might be incompatible with other features.
+            \item 尝试 1.58 bit 动态量化版本报错 (ValueError: GGUF model with architecture deepseek2 is not supported yet.)。
+            \item INT4 W4A16 量化可能是可行的方案 (未尝试)。
+        \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{模型下载问题}
+\subsubsection{模型下载问题}
+\begin{itemize}
+    \item 拉取 1.58 bit 动态量化模型时，\texttt{hf mirror} 速度慢且易断连。
+    \item \texttt{modelscope} 限速在 15MB/s 左右。
+    \item 对于 671B 这么大的模型，可以使用 \texttt{snapshot\_download} 下载部分文件夹。
+\end{itemize}
+% \textbf{使用 \texttt{snapshot\_download} 下载部分文件夹示例 }
+\begin{lstlisting}
+from huggingface_hub import snapshot_download
+snapshot_download(repo_id='unsloth/DeepSeek-R1-GGUF', allow_patterns='DeepSeek-R1-UD-IQ1_S/*', cache_dir='./')
+
+# modelscope
+
+from modelscope.hub.snapshot_download import snapshot_download
+model_dir = snapshot_download(repo_id='unsloth/DeepSeek-R1-GGUF', allow_patterns='DeepSeek-R1-UD-IQ1_S/*',cache_dir='./')
+\end{lstlisting}
+\end{frame}

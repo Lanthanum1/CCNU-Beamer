@@ -1,9 +1,10 @@
 This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex)
  restricted \write18 enabled.
 entering extended mode
+(./slide.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(./slide.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
+(/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2024/01/06 v3.71 A class for typesetting presentations
 (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
@@ -292,28 +293,70 @@ No file slide.nav.
 No file slide.toc.
 [2] (./0.tex
 No file slide.toc.
-[3] (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
+[3]
+No file slide.toc.
+[4] (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd) [5]
+No file slide.toc.
+[6] [7]) (./1.tex
+No file slide.toc.
+[8]
+No file slide.toc.
+[9] (./slide.vrb
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
 
-[4] [5] [6] [7]) [8] (./slide.aux)
+) [10] (./slide.vrb) [11]
+No file slide.toc.
+[12] (./slide.vrb) [13] (./slide.vrb) [14] (./slide.vrb) [15] (./slide.vrb)
+[16] (./slide.vrb) [17] [18] (./slide.vrb) [19] (./slide.vrb) [20] (./slide.vrb
+) [21]) (./2.tex
+No file slide.toc.
+[22]
+No file slide.toc.
+[23] (./slide.vrb) [24] (./slide.vrb) [25]
+No file slide.toc.
+[26] [27] [28] [29]) (./3.tex
+No file slide.toc.
+[30] [31] [32] (./slide.vrb) [33]) (./4.tex
+No file slide.toc.
+[34]
+No file slide.toc.
+[35]
+Overfull \vbox (1.42284pt too high) detected at line 23
+[36]
+Overfull \vbox (1.42284pt too high) detected at line 35
+[37]
+Overfull \vbox (1.42284pt too high) detected at line 47
+[38]
+Overfull \vbox (1.42284pt too high) detected at line 59
+[39]
+Overfull \vbox (1.42284pt too high) detected at line 71
+[40] (./slide.vrb) [41]
+No file slide.toc.
+[42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] (./slide.vrb) [53])
+[54] (./slide.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 
 Package rerunfilecheck Warning: File `slide.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
  )
-Output written on slide.pdf (8 pages).
+(see the transcript file for additional information)
+Output written on slide.pdf (54 pages).
 SyncTeX written on slide.synctex.gz.
 Transcript written on slide.log.
 This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex)
  restricted \write18 enabled.
 entering extended mode
+(./slide.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(./slide.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
+(/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2024/01/06 v3.71 A class for typesetting presentations
 (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
@@ -576,7 +619,11 @@ y))
 Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault'
 (xeCJK)                (FandolSong-Regular(0)).
 
-(./slide.aux)
+(./slide.aux
+
+LaTeX Warning: Label `fig:kaoyan_solution_7' multiply defined.
+
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 (./slide.out) (./slide.out)
@@ -594,17 +641,42 @@ tionary-English.dict)
 tionary-English.dict)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ctex/dictionary/translator-theore
 m-dictionary-ChineseUTF8.dict) (./slide.nav) [1] (./slide.toc) [2] (./0.tex
-(./slide.toc) [3]
+(./slide.toc) [3] (./slide.toc) [4]
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd) [5]
+(./slide.toc) [6] [7]) (./1.tex (./slide.toc) [8] (./slide.toc) [9]
+(./slide.vrb
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
 
-[4] [5] [6] [7]) [8] (./slide.aux) )
-Output written on slide.pdf (8 pages).
+) [10] (./slide.vrb) [11] (./slide.toc)
+Overfull \vbox (73.98512pt too high) detected at line 31
+[12] (./slide.vrb) [13] (./slide.vrb) [14] (./slide.vrb) [15] (./slide.vrb)
+[16] (./slide.vrb) [17] [18] (./slide.vrb) [19] (./slide.vrb) [20] (./slide.vrb
+) [21]) (./2.tex (./slide.toc) [22] (./slide.toc) [23] (./slide.vrb) [24]
+(./slide.vrb) [25] (./slide.toc) [26] [27] [28] [29]) (./3.tex (./slide.toc)
+[30] [31] [32] (./slide.vrb) [33]) (./4.tex (./slide.toc) [34] (./slide.toc)
+[35]
+Overfull \vbox (1.42284pt too high) detected at line 23
+[36]
+Overfull \vbox (1.42284pt too high) detected at line 35
+[37]
+Overfull \vbox (1.42284pt too high) detected at line 47
+[38]
+Overfull \vbox (1.42284pt too high) detected at line 59
+[39]
+Overfull \vbox (1.42284pt too high) detected at line 71
+[40] (./slide.vrb) [41] (./slide.toc) [42] [43] [44] [45] [46] [47] [48]
+[49] [50] [51] [52] (./slide.vrb) [53]) [54] (./slide.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)
+Output written on slide.pdf (54 pages).
 SyncTeX written on slide.synctex.gz.
 Transcript written on slide.log.
-make[1]: Entering directory '/root/github/CCNU-Beamer'
+make[1]: Entering directory '/root/github/CCNU-Beamer/sample_slides/5_deepseek-r1'
 rm -f *.toc *.bbl *.blg *.out *.aux *.log *.bak *.thm *.fdb_latexmk *.fls *.glo *.gls *.idx *.ilg *.ind *.nav *.snm *.hd *.ins *.vrb >> .output
-make[1]: Leaving directory '/root/github/CCNU-Beamer'
+make[1]: Leaving directory '/root/github/CCNU-Beamer/sample_slides/5_deepseek-r1'

@@ -1,0 +1,151 @@
+\section{前期准备}
+\subsection{安装 Docker}
+
+\begin{frame}[fragile]
+	\frametitle{安装 Docker}
+	\begin{itemize}
+		\item 如果是一个空白机器，并且具有 Docker 权限，推荐直接使用 Docker 版本的 Ollama + Open Webui。
+		\item 有 sudo 权限的用户，推荐使用 1panel 的安装脚本。
+		\item 安装 1panel 的同时会自动安装 Docker + Docker Compose。
+		\item 中国大陆境内机器使用 1panel 的安装脚本会自动使用镜像地址安装，免去网络的烦恼。
+	\end{itemize}
+	\begin{lstlisting}
+curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{安装 Docker (续)}
+	\subsubsection{直接安装 Docker}
+	\begin{itemize}
+		\item 如果不喜欢使用 1panel 或没有面板安装权限，可直接安装 Docker。
+	\end{itemize}
+	\begin{lstlisting}
+export DOWNLOAD_URL="https://mirrors.tuna.tsinghua.edu.cn/docker-ce" # 非中国大陆区域可取消这行
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+\end{lstlisting}
+\end{frame}
+
+\subsection{安装 Ollama + Open Webui}
+
+\begin{frame}[fragile]
+	\frametitle{安装 Ollama + Open Webui}
+	\subsubsection{安装 Ollama}
+	\begin{itemize}
+		\item 如果已有 Ollama，必须升级到最新版本，否则可能不支持 Deepseek R1 架构，升级脚本与安装脚本是相同的。
+	\end{itemize}
+	\begin{lstlisting}
+curl -fsSL https://ollama.com/install.sh | sh
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{安装 Open Webui}
+	\subsubsection{安装 Open Webui - 概述}
+	\begin{itemize}
+		\item Open Webui 不建议使用 pip 安装，升级 pip 安装的 Open Webui 出现过数据丢失的情况，建议使用 Docker 安装。
+		\item 如果服务器本身处在 Docker 容器内，或者无法处理后面的网络问题，也可以使用 pip 安装，建议使用 uv。
+	\end{itemize}
+% 	\begin{lstlisting}
+% # 示例: 安装 Open Webui
+% docker run -d -p 8080:8080 --name open-webui my-open-webui-image
+% \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{安装 Open Webui - uv pip 方式}
+	\subsubsection{uv pip 方式安装 Open Webui}
+	\begin{itemize}
+		\item 适用于服务器本身在 Docker 容器内或无法解决网络问题的场景。
+		\item 推荐使用 uv pip 安装。
+	\end{itemize}
+	\textbf{uv 不会继承pip.conf以及其他pip中设置镜像地址的方法，需要另外设置 uv 镜像 (非中国大陆地区可以跳过)}
+	% \lstinline|vim ~/.pip/pip.conf|
+
+	% 在 \lstinline|~/.pip/pip.conf| 文件中添加：
+	\begin{lstlisting}
+# vim ~/.config/uv/uv.toml
+
+[[index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{安装 Open Webui - uv pip 方式 (续)}
+	% \textbf{安装 uv, 创建并激活虚拟环境, 安装 Open Webui}
+	\begin{lstlisting}
+# 安装 uv
+pip install uv
+# 创建虚拟环境
+uv venv --python python3.11
+# 激活虚拟环境
+source .venv/bin/activate
+# 安装 Open Webui
+uv pip install open-webui
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{安装 Open Webui - Docker 方式}
+	\subsubsection{Docker 方式安装运行 Open Webui}
+	\begin{itemize}
+		\item 使用 Docker 方式安装 Open Webui。
+	\end{itemize}
+	\begin{lstlisting}
+docker run -d -p 8080:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always swr.cn-north-4.myhuaweicloud.com/ddn-k8s/ghcr.io/open-webui/open-webui:latest
+\end{lstlisting}
+\textbf{注意}:
+Open Webui 的 Docker image 不在 Docker 官方 hub.docker.com 中，而是在 ghcr.io 中，中国大陆境内无法访问 hub.docker.com，寻常 Docker 镜像站都是镜像于官方 hub.docker.com，可以访问渡渡鸟镜像站：https://docker.aityp.com/ 查询 Open Webui 的镜像，也可以使用南京大学的ghcr同步站：ghcr.nju.edu.cn （实测限速）
+\end{frame}
+
+\begin{frame}
+	\frametitle{Docker 网络配置}
+	\subsubsection{Docker 网络配置 - 访问宿主机网络}
+	\begin{itemize}
+		\item 桥接模式下，容器访问宿主机网络可以使用 \texttt{--add-host=host.docker.internal:host-gateway}。
+		\item 但这样并不总是可行，例如机器网络比较复杂或者 Docker 版本比较低等等原因，可以这样做（前提是已经设置\lstinline|OLLAMA_HOST=0.0.0.0|）：
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Docker 网络配置 - 访问宿主机网络 (续)}
+	\textbf{查看容器所属网络的网关地址}
+	\begin{lstlisting}
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.Gateway}}{{end}}' <容器名称或ID>
+# 例如: 172.17.0.0/
+\end{lstlisting}
+	\textbf{容器内部测试访问}
+	\begin{lstlisting}
+curl http://172.17.0.0/:宿主机端口
+\end{lstlisting}
+	\begin{itemize}
+		\item \textbf{注意}: 但是这样也未必可联通，很有可能会被防火墙阻挡，需要添加放行规则
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Docker 网络配置 - 防火墙放行}
+	\textbf{添加防火墙放行规则 (示例)}
+	\begin{lstlisting}
+sudo ufw allow proto tcp from 172.17.0.0/16 to any port 11434
+sudo ufw reload
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Docker 网络配置 - 容器互联}
+	\subsubsection{Docker 网络配置 - 容器互联}
+	\begin{itemize}
+		\item 如果 Ollama 和 Open Webui 分属不同 Docker 容器，可以将它们添加到同一个网络，通过容器名:端口互联。
+	\end{itemize}
+	\textbf{创建 Docker 网络并连接容器}
+	\begin{lstlisting}
+docker network create llm
+docker network connect llm < ollama_id >
+docker network connect llm < openwebui_id >
+\end{lstlisting}
+\end{frame}
