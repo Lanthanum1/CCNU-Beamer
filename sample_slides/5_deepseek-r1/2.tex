@@ -5,7 +5,7 @@
 \begin{frame}[fragile]
 \frametitle{运行 Ollama}
 \textbf{启动 Ollama 服务}
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 export OLLAMA_MODELS=/usr/share/ollama/.ollama/models
 export OLLAMA_HOST=0.0.0.0
 export OLLAMA_SCHED_SPREAD=1
@@ -26,7 +26,7 @@ nohup sh -c 'ollama serve' > ollama.log 2>&1 &
 \frametitle{拉取 DeepSeek R1}
 % \subsection{拉取 DeepSeek R1 模型}
 \textbf{使用 Ollama 拉取 DeepSeek R1 模型}
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 ollama pull deepseek-r1:671b # 默认就是 q4_K_M 量化
 \end{lstlisting}
 \end{frame}

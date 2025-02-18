@@ -303,6 +303,8 @@ No file slide.toc.
 [8]
 No file slide.toc.
 [9] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -319,7 +321,9 @@ No file slide.toc.
 No file slide.toc.
 [26] [27] [28] [29]) (./3.tex
 No file slide.toc.
-[30] [31] [32] (./slide.vrb) [33]) (./4.tex
+[30] [31] [32] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)) [33])
+(./4.tex
 No file slide.toc.
 [34]
 No file slide.toc.
@@ -333,10 +337,53 @@ Overfull \vbox (1.42284pt too high) detected at line 47
 Overfull \vbox (1.42284pt too high) detected at line 59
 [39]
 Overfull \vbox (1.42284pt too high) detected at line 71
-[40] (./slide.vrb) [41]
+[40] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+
+./slide.vrb:2: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...=text, caption={2024 AIME I Problem 4生成情况}]
+                                                  
+
+./slide.vrb:2: Package Listings Error: language text undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...=text, caption={2024 AIME I Problem 4生成情况}]
+                                                  
+) [41]
 No file slide.toc.
-[42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] (./slide.vrb) [53])
-[54] (./slide.aux)
+[42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+
+./slide.vrb:2: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...anguage=text, caption={2025 考研数学一 T18生成情况}]
+                                                  
+
+./slide.vrb:2: Package Listings Error: language text undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...anguage=text, caption={2025 考研数学一 T18生成情况}]
+                                                  
+) [53]) [54] (./slide.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -646,6 +693,8 @@ m-dictionary-ChineseUTF8.dict) (./slide.nav) [1] (./slide.toc) [2] (./0.tex
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd) [5]
 (./slide.toc) [6] [7]) (./1.tex (./slide.toc) [8] (./slide.toc) [9]
 (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -656,8 +705,9 @@ Overfull \vbox (73.98512pt too high) detected at line 31
 [16] (./slide.vrb) [17] [18] (./slide.vrb) [19] (./slide.vrb) [20] (./slide.vrb
 ) [21]) (./2.tex (./slide.toc) [22] (./slide.toc) [23] (./slide.vrb) [24]
 (./slide.vrb) [25] (./slide.toc) [26] [27] [28] [29]) (./3.tex (./slide.toc)
-[30] [31] [32] (./slide.vrb) [33]) (./4.tex (./slide.toc) [34] (./slide.toc)
-[35]
+[30] [31] [32] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)) [33])
+(./4.tex (./slide.toc) [34] (./slide.toc) [35]
 Overfull \vbox (1.42284pt too high) detected at line 23
 [36]
 Overfull \vbox (1.42284pt too high) detected at line 35
@@ -667,8 +717,52 @@ Overfull \vbox (1.42284pt too high) detected at line 47
 Overfull \vbox (1.42284pt too high) detected at line 59
 [39]
 Overfull \vbox (1.42284pt too high) detected at line 71
-[40] (./slide.vrb) [41] (./slide.toc) [42] [43] [44] [45] [46] [47] [48]
-[49] [50] [51] [52] (./slide.vrb) [53]) [54] (./slide.aux)
+[40] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+
+./slide.vrb:2: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...=text, caption={2024 AIME I Problem 4生成情况}]
+                                                  
+
+./slide.vrb:2: Package Listings Error: language text undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...=text, caption={2024 AIME I Problem 4生成情况}]
+                                                  
+) [41] (./slide.toc) [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+(./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+
+./slide.vrb:2: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...anguage=text, caption={2025 考研数学一 T18生成情况}]
+                                                  
+
+./slide.vrb:2: Package Listings Error: language text undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...anguage=text, caption={2025 考研数学一 T18生成情况}]
+                                                  
+) [53]) [54] (./slide.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
