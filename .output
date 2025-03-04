@@ -1,9 +1,10 @@
 This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex)
  restricted \write18 enabled.
 entering extended mode
+(./slide.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(./slide.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
+(/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2024/01/06 v3.71 A class for typesetting presentations
 (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
@@ -298,22 +299,59 @@ No file slide.toc.
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
 
-[4] [5] [6] [7]) [8] (./slide.aux)
+[4] [5] [6] [7]) (./1.tex
+No file slide.toc.
+[8]
+No file slide.toc.
+[9] [10]) (./2.tex
+No file slide.toc.
+[11]
+No file slide.toc.
+[12] [13]
+No file slide.toc.
+[14] [15] [16] [17] (./slide.vrb) [18] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty)) [19]
+(./slide.vrb) [20] (./slide.vrb) [21] (./slide.vrb
+
+LaTeX Warning: Reference `eq:vsphere' on page 22 undefined on input line 32.
+
+
+LaTeX Warning: Reference `tab:number' on page 22 undefined on input line 32.
+
+) [22] [23]) (./3.tex
+No file slide.toc.
+[24] [25]) [26] (./slide.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 
 Package rerunfilecheck Warning: File `slide.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
  )
-Output written on slide.pdf (8 pages).
+Output written on slide.pdf (26 pages).
 SyncTeX written on slide.synctex.gz.
 Transcript written on slide.log.
 This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex)
  restricted \write18 enabled.
 entering extended mode
+(./slide.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(./slide.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
+(/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2024/01/06 v3.71 A class for typesetting presentations
 (/usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
@@ -601,8 +639,22 @@ m-dictionary-ChineseUTF8.dict) (./slide.nav) [1] (./slide.toc) [2] (./0.tex
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
 
-[4] [5] [6] [7]) [8] (./slide.aux) )
-Output written on slide.pdf (8 pages).
+[4] [5] [6] [7]) (./1.tex (./slide.toc) [8] (./slide.toc) [9] [10]) (./2.tex
+(./slide.toc) [11] (./slide.toc) [12] [13] (./slide.toc) [14] [15] [16]
+[17] (./slide.vrb) [18] (./slide.vrb
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty)) [19]
+(./slide.vrb) [20] (./slide.vrb) [21] (./slide.vrb) [22] [23]) (./3.tex
+(./slide.toc) [24] [25]) [26] (./slide.aux) )
+Output written on slide.pdf (26 pages).
 SyncTeX written on slide.synctex.gz.
 Transcript written on slide.log.
 make[1]: Entering directory '/root/github/CCNU-Beamer'
